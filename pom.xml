@@ -19,7 +19,6 @@
     under the License.
 
 -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -29,9 +28,9 @@
         <version>31</version>
     </parent>
 
-    <groupId>org.apache.curator</groupId>
+    <groupId>io.arenadata.curator</groupId>
     <artifactId>apache-curator</artifactId>
-    <version>5.9.0</version>
+    <version>5.9.0.1-4.2.0-0-dev1</version>
     <packaging>pom</packaging>
 
     <name>Apache Curator</name>
@@ -54,6 +53,14 @@
         <url>https://www.apache.org/</url>
     </organization>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub arenadata Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/arenadata/curator</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <!-- maven properties -->
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -72,7 +79,7 @@
         <redirectTestOutputToFile>true</redirectTestOutputToFile>
 
         <!-- versions -->
-        <zookeeper-version>3.9.3</zookeeper-version>
+        <zookeeper-version>3.9.4.1-4.2.0-0-dev1</zookeeper-version>
         <maven-bundle-plugin-version>5.1.4</maven-bundle-plugin-version>
         <maven-compiler-plugin-version>3.10.0</maven-compiler-plugin-version>
         <maven-dependency-plugin-version>3.2.0</maven-dependency-plugin-version>
@@ -97,7 +104,7 @@
         <scannotation-version>1.0.2</scannotation-version>
         <!-- resteasy-jaxrs dependency cannot be higher than 2.x for compatibility with Jersey 1.x -->
         <resteasy-jaxrs-version>2.3.5.Final</resteasy-jaxrs-version>
-        <guava-version>32.0.0-jre</guava-version>
+        <guava-version>32.0.1-jre</guava-version>
         <guava-listenablefuture-version>9999.0-empty-to-avoid-conflict-with-guava</guava-listenablefuture-version>
         <guava-failureaccess-version>1.0.1</guava-failureaccess-version>
         <junit-version>5.6.2</junit-version>
@@ -111,13 +118,13 @@
         <awaitility-version>4.1.1</awaitility-version>
 
         <!-- OSGi Properties -->
-        <osgi.export.package />
-        <osgi.import.package />
-        <osgi.private.package />
-        <osgi.dynamic.import />
-        <osgi.require.bundle />
-        <osgi.export.service />
-        <osgi.activator />
+        <osgi.export.package/>
+        <osgi.import.package/>
+        <osgi.private.package/>
+        <osgi.dynamic.import/>
+        <osgi.require.bundle/>
+        <osgi.export.service/>
+        <osgi.activator/>
     </properties>
 
     <scm>
@@ -350,10 +357,6 @@
         <module>curator-x-discovery</module>
         <module>curator-x-discovery-server</module>
         <module>curator-x-async</module>
-        <module>curator-test-zk35</module>
-        <module>curator-test-zk36</module>
-        <module>curator-test-zk37</module>
-        <module>curator-test-zk38</module>
     </modules>
 
     <dependencyManagement>
@@ -377,64 +380,64 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.curator</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>curator-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.apache.curator</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>curator-client</artifactId>
                 <type>test-jar</type>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.apache.curator</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>curator-framework</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.apache.curator</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>curator-framework</artifactId>
                 <type>test-jar</type>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.apache.curator</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>curator-recipes</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.apache.curator</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>curator-recipes</artifactId>
                 <version>${project.version}</version>
                 <type>test-jar</type>
             </dependency>
 
             <dependency>
-                <groupId>org.apache.curator</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>curator-test</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.apache.curator</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>curator-x-discovery</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.apache.curator</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>curator-x-discovery-server</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.apache.curator</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>curator-x-async</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -536,7 +539,7 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.zookeeper</groupId>
+                <groupId>io.arenadata.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
                 <version>${zookeeper-version}</version>
                 <exclusions>
@@ -895,8 +898,8 @@
                                 <condition property="skip-attaching-original-artifact" else="false">
                                     <not>
                                         <or>
-                                            <equals arg1="${project.packaging}" arg2="jar" />
-                                            <equals arg1="${project.packaging}" arg2="bundle" />
+                                            <equals arg1="${project.packaging}" arg2="jar"/>
+                                            <equals arg1="${project.packaging}" arg2="bundle"/>
                                         </or>
                                     </not>
                                 </condition>
@@ -948,9 +951,9 @@
                         <importOrder>
                             <order>\#|</order>
                         </importOrder>
-                        <removeUnusedImports />
-                        <trimTrailingWhitespace />
-                        <endWithNewline />
+                        <removeUnusedImports/>
+                        <trimTrailingWhitespace/>
+                        <endWithNewline/>
                         <indent>
                             <spaces>true</spaces>
                             <spacesPerTab>4</spacesPerTab>

@@ -19,18 +19,17 @@
     under the License.
 
 -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.apache.curator</groupId>
+        <groupId>io.arenadata.curator</groupId>
         <artifactId>apache-curator</artifactId>
-        <version>5.9.0</version>
+        <version>5.9.0.1-4.2.0-0-dev1</version>
     </parent>
 
     <artifactId>curator-test</artifactId>
-    <version>5.9.0</version>
+    <version>5.9.0.1-4.2.0-0-dev1</version>
 
     <name>Curator Testing</name>
     <description>Unit testing utilities.</description>
@@ -38,7 +37,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.zookeeper</groupId>
+            <groupId>io.arenadata.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
         </dependency>
 
