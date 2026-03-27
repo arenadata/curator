@@ -26,11 +26,11 @@
     <parent>
         <groupId>org.apache.curator</groupId>
         <artifactId>apache-curator</artifactId>
-        <version>5.9.0</version>
+        <version>5.9.0.1-4.3.0-0</version>
     </parent>
 
     <artifactId>curator-recipes</artifactId>
-    <version>5.9.0</version>
+    <version>5.9.0.1-4.3.0-0</version>
     <packaging>bundle</packaging>
 
     <name>Curator Recipes</name>
@@ -93,6 +93,12 @@
             <groupId>org.awaitility</groupId>
             <artifactId>awaitility</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>3.0.2</version>
         </dependency>
     </dependencies>
 

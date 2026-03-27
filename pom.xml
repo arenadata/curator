@@ -31,7 +31,7 @@
 
     <groupId>org.apache.curator</groupId>
     <artifactId>apache-curator</artifactId>
-    <version>5.9.0</version>
+    <version>5.9.0.1-4.3.0-0</version>
     <packaging>pom</packaging>
 
     <name>Apache Curator</name>
@@ -72,7 +72,7 @@
         <redirectTestOutputToFile>true</redirectTestOutputToFile>
 
         <!-- versions -->
-        <zookeeper-version>3.9.3</zookeeper-version>
+        <zookeeper-version>3.9.5.1-4.3.0-0</zookeeper-version>
         <maven-bundle-plugin-version>5.1.4</maven-bundle-plugin-version>
         <maven-compiler-plugin-version>3.10.0</maven-compiler-plugin-version>
         <maven-dependency-plugin-version>3.2.0</maven-dependency-plugin-version>
@@ -84,8 +84,8 @@
         <javassist-version>3.24.1-GA</javassist-version>
         <commons-math-version>2.2</commons-math-version>
         <jackson-mapper-asl-version>1.9.13</jackson-mapper-asl-version>
-        <jackson-version>2.18.1</jackson-version>
-        <assertj-version>3.23.1</assertj-version>
+        <jackson-version>2.18.6</jackson-version>
+        <assertj-version>3.27.7</assertj-version>
         <!-- Upgrading to Jersey 2.x is difficult and of unclear benefits, see
              https://stackoverflow.com/questions/17098341#22033825 -->
         <jersey-version>1.19.4</jersey-version>
@@ -93,11 +93,11 @@
         <!-- See https://stackoverflow.com/questions/43574426#comment93992044_43574427 -->
         <jaxb-version>2.2.11</jaxb-version>
         <javax-activation-version>1.1.1</javax-activation-version>
-        <jetty-version>9.4.57.v20241219</jetty-version>
+        <jetty-version>9.4.58.v20250814</jetty-version>
         <scannotation-version>1.0.2</scannotation-version>
         <!-- resteasy-jaxrs dependency cannot be higher than 2.x for compatibility with Jersey 1.x -->
-        <resteasy-jaxrs-version>2.3.5.Final</resteasy-jaxrs-version>
-        <guava-version>32.0.0-jre</guava-version>
+        <resteasy-jaxrs-version>2.3.10.Final</resteasy-jaxrs-version>
+        <guava-version>33.5.0-jre</guava-version>
         <guava-listenablefuture-version>9999.0-empty-to-avoid-conflict-with-guava</guava-listenablefuture-version>
         <guava-failureaccess-version>1.0.1</guava-failureaccess-version>
         <junit-version>5.6.2</junit-version>
@@ -350,11 +350,22 @@
         <module>curator-x-discovery</module>
         <module>curator-x-discovery-server</module>
         <module>curator-x-async</module>
-        <module>curator-test-zk35</module>
-        <module>curator-test-zk36</module>
-        <module>curator-test-zk37</module>
-        <module>curator-test-zk38</module>
     </modules>
+
+    <repositories>
+        <repository>
+            <id>arenadata</id>
+            <url>https://maven.pkg.github.com/arenadata/*</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub arenadata Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/arenadata/curator</url>
+        </repository>
+    </distributionManagement>
 
     <dependencyManagement>
         <dependencies>
@@ -532,7 +543,21 @@
                         <groupId>org.scannotation</groupId>
                         <artifactId>scannotation</artifactId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.logging</groupId>
+                        <artifactId>jboss-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                    </exclusion>
                 </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.logging</groupId>
+                <artifactId>jboss-logging</artifactId>
+                <version>3.4.3.Final</version>
             </dependency>
 
             <dependency>
