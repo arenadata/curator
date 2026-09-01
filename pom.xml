@@ -31,7 +31,7 @@
 
     <groupId>org.apache.curator</groupId>
     <artifactId>apache-curator</artifactId>
-    <version>5.9.0.1-4.3.0-0</version>
+    <version>5.9.0.2-4.4.0-0</version>
     <packaging>pom</packaging>
 
     <name>Apache Curator</name>
