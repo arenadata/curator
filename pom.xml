@@ -72,7 +72,7 @@
         <redirectTestOutputToFile>true</redirectTestOutputToFile>
 
         <!-- versions -->
-        <zookeeper-version>3.9.5.2-4.4.0-0</zookeeper-version>
+        <zookeeper-version>3.9.5.3-4.5.0-0</zookeeper-version>
         <maven-bundle-plugin-version>5.1.4</maven-bundle-plugin-version>
         <maven-compiler-plugin-version>3.10.0</maven-compiler-plugin-version>
         <maven-dependency-plugin-version>3.2.0</maven-dependency-plugin-version>
