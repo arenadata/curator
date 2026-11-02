@@ -85,7 +85,7 @@
         <commons-math-version>2.2</commons-math-version>
         <commons-io-version>2.17.0</commons-io-version>
         <jackson-mapper-asl-version>1.9.13</jackson-mapper-asl-version>
-        <jackson-version>2.18.10</jackson-version>
+        <jackson-version>2.18.11</jackson-version>
         <assertj-version>3.27.7</assertj-version>
         <!-- Upgrading to Jersey 2.x is difficult and of unclear benefits, see
              https://stackoverflow.com/questions/17098341#22033825 -->
@@ -98,7 +98,7 @@
         <scannotation-version>1.0.2</scannotation-version>
         <!-- resteasy-jaxrs dependency cannot be higher than 2.x for compatibility with Jersey 1.x -->
         <resteasy-jaxrs-version>2.3.10.Final</resteasy-jaxrs-version>
-        <guava-version>33.5.0-jre</guava-version>
+        <guava-version>33.7.2-jre</guava-version>
         <guava-listenablefuture-version>9999.0-empty-to-avoid-conflict-with-guava</guava-listenablefuture-version>
         <guava-failureaccess-version>1.0.1</guava-failureaccess-version>
         <junit-version>5.6.2</junit-version>
@@ -108,7 +108,7 @@
         <reload4j-version>1.2.26</reload4j-version>
         <clirr-maven-plugin-version>2.8</clirr-maven-plugin-version>
         <dropwizard-version>3.2.5</dropwizard-version>
-        <snappy-version>1.1.10.4</snappy-version>
+        <snappy-version>1.1.10.9</snappy-version>
         <build-helper-maven-plugin-version>3.3.0</build-helper-maven-plugin-version>
         <awaitility-version>4.1.1</awaitility-version>
 
